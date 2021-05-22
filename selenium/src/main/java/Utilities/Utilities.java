@@ -29,7 +29,7 @@ public class Utilities {
     public static WebDriver driver;
     public static String dirPath;
     public static WebDriver getDriver(){
-
+        if(System.getProperty("BrowserName").equals("chrome")) {
             dirPath = System.getProperty("user.dir");
             System.setProperty("webdriver.chrome.driver", dirPath + "/src/main/resources/chromedriver");
             ChromeOptions options = new ChromeOptions();
@@ -44,7 +44,7 @@ public class Utilities {
                     e.printStackTrace();
                 }
             }
-
+        }
         return driver;
     }
 
