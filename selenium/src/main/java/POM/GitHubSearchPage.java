@@ -25,10 +25,6 @@ public class GitHubSearchPage extends Utilities {
         PageFactory.initElements(driver, this);
     }
 
-    public static String amount;
-    public static String publicLink;
-
-
     @FindBy(xpath = ".//input[@name='q'][@aria-label='Search GitHub']")
     public WebElement _searchBoxHomePage;
 
@@ -47,23 +43,6 @@ public class GitHubSearchPage extends Utilities {
     @FindBy(xpath = ".//ul[@id='tree-browser']/li/a")
     public List<WebElement> _resultCount;
 
-    @FindBy(xpath = ".//h1[text()='Page navigation']/parent::span//table//tr/td//span[text()='Next']")
-    public WebElement _nextOption;
-
-    @FindBy(xpath = "//div/a[text()='Settings']")
-    public WebElement _settingsOption;
-
-    @FindBy(xpath = "//div/a/span[text()='Languages']")
-    public WebElement _chooseLanguageSetting;
-
-    @FindBy(xpath = "//div[@id='langtde']//span[text()='Deutsch']")
-    public WebElement _dutchLanguage;
-
-    @FindBy(xpath = ".//div[text()='Save']")
-    public WebElement _saveButton;
-
-    @FindBy(xpath = " .//img[@src='/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png']")
-    public WebElement _homePageIcon;
 
     public boolean gitHubHomePage(){
         return _searchBoxHomePage.isDisplayed();
